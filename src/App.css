@@ -1,0 +1,138 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+ */
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.github{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading{
+  font-weight: 600;
+  margin: 20 auto;
+  padding: 60px;
+
+}
+
+.tour-img{
+  width: 90%;
+  height: 50%;
+  
+}
+
+.Tours{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.tour{
+  border: 4px solid gray;
+  display: flex;
+  border-radius: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  text-align: center;
+}
+
+.tour-info{
+  width: 60%;
+  height: 50%;
+}
+
+.users{
+  display: flex;
+  flex-direction: column;  
+}
+
+.user{
+   display: flex;
+   justify-content: space-between;
+   border: 2px solid rgb(184, 181, 175);
+   margin: 20px 0;
+   border-radius: 30px;
+   box-shadow: 0 10px 10px 0 rgba(225,225 , 225, 0.9);
+}
+
+.user-img{
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+}
+
+button{
+  cursor: pointer;
+}
+
+.btn{
+  background-color: azure;
+  padding: 10px;
+  border: 5px solid gray;
+}
+
+.bg-btn{
+  background-color: cadetblue;
+  border: 3px solid;
+  padding: 9px;
+}
+
