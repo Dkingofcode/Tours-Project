@@ -97,19 +97,20 @@ function App(){
   const [isloading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
+
+  const FetchTours = async () => {
+    try{ 
+     const response = await fetch(url);
+     const data = await response.json();
+     setTours(data);
+     console.log(data);
+   }catch(error){
+      console.log(error);
+
+   }
+  }
+
   useEffect(() => {
-    const FetchTours = async () => {
-      try{ 
-       const response = await fetch(url);
-       const data = await response.json();
-       setTours(data);
-       console.log(data);
-     }catch(error){
-        console.log(error);
-
-     }
-    }
-
      FetchTours()
   }, [])
 
@@ -129,11 +130,24 @@ function App(){
      ) 
   }
 
+
   if(isError){
     setIsError(true)
     return <h1> Error 404 page</h1>
   }
 
+  if(tours.length === 0){
+    return (
+      <main>
+        <div>
+          <h2>no tours left</h2>
+          <button type="button" style={{ marginTop: '2rem' }} className='btn' onClick={() => FetchTours}>
+            refresh
+          </button>
+        </div>
+      </main>
+    )
+  }
 
   return(
     <Tours tours={tours} removeTours={removeTours} />
